@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     List<MovieModelClass> movieList;
     RecyclerView recyclerView;
-    ImageView header;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         movieList = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerView);
-        header = findViewById(R.id.imageView2);
 
-        // name image that will be used for header "header"
-        Glide.with(this)
-                .load(R.drawable.netflix)
-                .into(header);
 
         GetData getData = new GetData();
         getData.execute();
